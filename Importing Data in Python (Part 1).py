@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Feb 16 18:30:13 2019
-
-@author: Jie
-"""
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -12,7 +5,7 @@ import matplotlib.pyplot as plt
 
 ###############################################################################
 # Assign filename: file
-file = 'F:/0 - PhD at UTD/2019 Spring/DataCamp/Importing Data in Python (Part 1)/seaslug.txt'
+file = 'seaslug.txt'
 
 # Import file: data
 data = np.loadtxt(file, delimiter='\t', dtype=str)
@@ -32,7 +25,7 @@ plt.xlabel('time (min.)')
 plt.ylabel('percentage of larvae')
 plt.show()
 ###############################################################################
-data=np.genfromtxt('F:/0 - PhD at UTD/2019 Spring/DataCamp/Importing Data in Python (Part 1)/titanic_sub.csv', delimiter=',', names=True, dtype=None)
+data=np.genfromtxt('titanic_sub.csv', delimiter=',', names=True, dtype=None)
 print(data)
 print(data['Survived'])
 
@@ -41,7 +34,7 @@ print(data['Survived'])
 import pandas as pd
 
 # Assign spreadsheet filename: file
-file = 'F:/0 - PhD at UTD/2019 Spring/DataCamp/Importing Data in Python (Part 1)/battledeath.xlsx'
+file = 'battledeath.xlsx'
 
 # Load spreadsheet: xl
 xl = pd.ExcelFile(file)
@@ -79,7 +72,7 @@ print(df22.head())
 from sas7bdat import SAS7BDAT
 
 # Save file to a DataFrame: df_sas
-with SAS7BDAT('F:/0 - PhD at UTD/2019 Spring/DataCamp/Importing Data in Python (Part 1)/sales.sas7bdat') as file:
+with SAS7BDAT('sales.sas7bdat') as file:
     df_sas=file.to_data_frame()
 
 # Print head of DataFrame
@@ -94,7 +87,7 @@ plt.show()
 import pandas as pd
 
 # Load Stata file into a pandas DataFrame: df
-df=pd.read_stata('F:/0 - PhD at UTD/2019 Spring/DataCamp/Importing Data in Python (Part 1)/disarea.dta')
+df=pd.read_stata('disarea.dta')
 
 # Print the head of the DataFrame df
 print(df.head())
@@ -110,7 +103,7 @@ import numpy as np
 import h5py
 
 # Assign filename: file
-f='F:/0 - PhD at UTD/2019 Spring/DataCamp/Importing Data in Python (Part 1)/L-L1_LOSC_4_V1-1126259446-32.hdf5'
+f='L-L1_LOSC_4_V1-1126259446-32.hdf5'
 
 # Load file: data
 data = h5py.File(f, 'r')
@@ -149,7 +142,7 @@ plt.show()
 import scipy.io
 
 # Load MATLAB file: mat
-mat=scipy.io.loadmat('F:/0 - PhD at UTD/2019 Spring/DataCamp/Importing Data in Python (Part 1)/ja_data2.mat')
+mat=scipy.io.loadmat('ja_data2.mat')
 
 # Print the datatype type of mat
 print(type(mat))
@@ -176,7 +169,7 @@ plt.show()
 from sqlalchemy import create_engine
 
 # Create engine: engine
-engine=create_engine('sqlite:///F:/0 - PhD at UTD/2019 Spring/DataCamp/Importing Data in Python (Part 1)/Chinook.sqlite')
+engine=create_engine('sqlite:///Chinook.sqlite')
 
 # Save the table names to a list: table_names
 table_names=engine.table_names()
@@ -251,7 +244,7 @@ from sqlalchemy import create_engine
 import pandas as pd
 
 # Create engine: engine
-engine=create_engine('sqlite:///F:/0 - PhD at UTD/2019 Spring/DataCamp/Importing Data in Python (Part 1)/Chinook.sqlite')
+engine=create_engine('sqlite:///Chinook.sqlite')
 
 # Execute query and store records in DataFrame: df
 con=engine.connect()
@@ -266,7 +259,7 @@ from sqlalchemy import create_engine
 import pandas as pd
 
 # Create engine: engine
-engine=create_engine('sqlite:///F:/0 - PhD at UTD/2019 Spring/DataCamp/Importing Data in Python (Part 1)/Chinook.sqlite')
+engine=create_engine('sqlite:///Chinook.sqlite')
 
 # Execute query and store records in DataFrame: df
 with engine.connect() as con:
@@ -288,25 +281,3 @@ with engine.connect() as con:
 
 # Print head of DataFrame
 print(df.head())
-###############################################################################
-
-###############################################################################
-
-###############################################################################
-
-###############################################################################
-
-###############################################################################
-
-###############################################################################
-
-###############################################################################
-
-###############################################################################
-
-###############################################################################
-
-###############################################################################
-
-###############################################################################
-
